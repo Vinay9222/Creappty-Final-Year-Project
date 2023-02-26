@@ -1,0 +1,108 @@
+header {
+    padding: 20px;
+    margin: 20px;
+    background-color: lightgray;
+}
+
+header h1 {
+    font-size: xx-large;
+    text-align: center;
+    margin-left: auto;
+    margin: 0;
+}
+
+#back-button {
+    position: absolute;
+    top: 50px;
+    left: 45px;
+}
+
+.hidden {
+    display: none;
+}
+
+ul {
+    margin: 100px;
+    padding: 25px;
+    border-radius: 5px;
+    background-color: lightgray;
+    list-style: none;
+}
+
+li {
+    margin: 15px;
+    padding: 15px;
+    border: black;
+    border-style: ridge;
+    font-size: x-large;
+}
+
+#red {
+    color: red;
+}
+
+#next-button {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#content2 p {
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+#redcolor {
+    color: red;
+}
+
+.name-container {
+    display: flex;
+    align-items: stretch;
+    margin-bottom: 10px;
+    font-size: x-large;
+}
+
+.name-container p {
+    font-size: x-large;
+}
+
+.required {
+    color: red;
+    margin-left: 5px;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    padding: 10px;
+}
+
+.input-group-addon {
+    width: 15px;
+    height: 13px;
+    border-radius: 120px;
+    background-color: white;
+    color: #333;
+    font-size: 12px;
+    text-align: center;
+    line-height: 15px;
+    display: inline-block;
+    border-color: black;
+    font-variant: ruby;
+}

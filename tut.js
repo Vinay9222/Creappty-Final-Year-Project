@@ -1,0 +1,96 @@
+const http = require('http');
+
+const hostname = '127.0.0.1';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/html');
+  res.end(`<!DOCTYPE html>
+  <html>
+  
+  <head>
+      <meta charset="UTF-8">
+      <title>Details Page</title>
+      <link rel="stylesheet" type="text/css" href="login_style.css">
+  </head>
+  
+  <body>
+      <header>
+          <button id="back-button">Back</button>
+          <h1>CREATE YOUTUBE CHANNEL APP</h1>
+      </header>
+      <main>
+          <ul>
+              <li onclick="toggleContent('content1')">TEMPLATE DESCRIPTION</li>
+              <li id="content1">
+                  <p class="content-description">Create YouTube Channel app for Android without coding. Convert YouTube
+                      channel to a responsive mobile app with instant access to the channel and videos. The free app
+                      template features playlist split, push notifications, security and privacy, appearance
+                      customization. Give your subscribers instant access to playlists and send push notifications with
+                      new content on your YouTube channel.</p>
+                  <p>How to convert YouTube channel or playlist to Android app : enter YouTube API key, choose channel or
+                      playlist, enter URL, set the color scheme, name your app, choose or upload an icon. Preview your app
+                      to see how it works before building an apk file.</p>
+                  <p>To create a successful YouTube app, you should use relevant keywords in the name and description,
+                      localize your app in your home language, make quality screenshots. This app will increase the
+                      audience of your channel and also will help your users be aware of the latest updates!</p>
+                  <p id="red">Fields marked with * symbol are required</p>
+                  <button id="next-button" onclick="toggleContent('content2')">NEXT</button>
+              </li>
+              <li onclick="toggleContent('content2')">APP SETTING</li>
+              <li id="content2" class="hidden">IMPORTANT! You need to have a valid and active YouTube API key for your
+                  appv to function.
+                  <div class="name-container">
+                      <label for="name">Email :</label>
+                      <input type="text" id="email" name="email" required>
+                      <span class="required">*</span>
+                  </div>
+                  <div class="name-container">
+                      <label for="name">API key :</label>
+                      <input type="text" id="name" name="name" required>
+                      <span class="required">* </span>
+                      <span class="input-group-addon">i</span>
+                  </div>
+                  <!-- <p id="redcolor">You must enter your YouTube API key</p> -->
+                  <div class="name-container">
+                      <label for="name">Channel URL :</label>
+                      <input type="text" id="name" name="name" required>
+                      <span class="required">*</span>
+                      <span class="input-group-addon">i</span>
+                  </div>
+                  <div class="radio-group">
+                      Input type :
+                      <input type="radio" id="radio-1" name="radio" value="1">
+                      <label for="radio-1">YouTube channel url</label>
+                      <input type="radio" id="radio-1" name="radio" value="1">
+                      <label for="radio-1">YouTube playlist url</label>
+                  </div>
+                  <!-- <p id="redcolor">You must fill this field with your channel name or url </p> -->
+                  <!-- <p>
+                      Channel: https://www.youtube.com/channel/UCLEr8ccBCfPVV_MylmzI_Lg
+  
+                      PlayList: http://www.youtube.com/playlist?list=PL6F376A29410B551F</p> -->
+                  <div class="radio-group">
+                      Want playlists? :
+                      <input type="radio" id="radio-1" name="radio" value="1">
+                      <label for="radio-1">Yes</label>
+                      <input type="radio" id="radio-1" name="radio" value="1">
+                      <label for="radio-1">No</label>
+                  </div>
+                  <p>Important!</p>
+                  <p> It works if you enter the name or a link to the channel!</p>
+                  <button id="next-button">NEXT</button>
+              </li>
+  
+          </ul>
+      </main>
+      <script src="script.js"></script>
+  </body>
+  
+  </html>`);
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
